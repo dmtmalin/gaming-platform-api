@@ -2,7 +2,7 @@ package ru.iteco.property;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-@ConfigurationProperties(prefix = "core.image-thumbnail")
+@ConfigurationProperties(prefix = "application.image-thumbnail")
 public class ImageThumbnailProperties {
     private Integer iconSmallWidth = 100;
 
