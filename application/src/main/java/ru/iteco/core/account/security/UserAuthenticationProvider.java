@@ -9,8 +9,6 @@ import ru.iteco.core.account.User;
 @Component
 public class UserAuthenticationProvider implements AuthenticationProvider {
 
-    private final Integer IS_EMPTY = -1;
-
     @Override
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {
         User user = (User) authentication.getPrincipal();
@@ -27,8 +25,9 @@ public class UserAuthenticationProvider implements AuthenticationProvider {
     }
 
     private boolean isValid(User user) {
+        Integer isEmpty = -1;
         Integer userId = user.getUserId();
         Integer profileId = user.getProfileId();
-        return userId > IS_EMPTY && profileId > IS_EMPTY;
+        return userId > isEmpty && profileId > isEmpty;
     }
 }
