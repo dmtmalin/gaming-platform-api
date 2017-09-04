@@ -29,7 +29,7 @@ public class UserAuthenticationRequestFilter extends OncePerRequestFilter {
             throws ServletException, IOException {
         Integer userId = request.getIntHeader("user-id");
         Integer profileId = request.getIntHeader("profile-id");
-        User user = new User(userId, profileId);
+        User user = User.valueOf(userId, profileId);
         UserDetails userDetails = userToUserDetails.convert(user);
         UserAuthentication userAuthentication = new UserAuthentication(userDetails);
         SecurityContextHolder.getContext().setAuthentication(userAuthentication);
