@@ -1,0 +1,25 @@
+= Загрузка файлов
+
+== Загрузка иконки игры
+
+.request
+include::{snippets}/attachIcon/curl-request.adoc[]
+
+.response
+include::{snippets}/attachIcon/http-response.adoc[]
+
+== Загрузка основного экрана игры
+
+.request
+include::{snippets}/attachScreen/curl-request.adoc[]
+
+.response
+include::{snippets}/attachScreen/http-response.adoc[]
+
+== Загрузка архива игры
+
+.request
+include::{snippets}/attachArchive/curl-request.adoc[]
+
+.response
+include::{snippets}/attachArchive/http-response.adoc[]
